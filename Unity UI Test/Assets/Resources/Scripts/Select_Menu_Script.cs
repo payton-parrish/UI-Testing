@@ -9,11 +9,13 @@ public class Select_Menu_Script : MonoBehaviour
     public Object[] videos; 
     public GameObject missingText;
     public GameObject button;
+    public Slider slides;
     // Start is called before the first frame update
     void Start()
     {
         missingText.GetComponent<TMPro.TextMeshProUGUI>().text = "Currently no videos.";
         missingText.SetActive(false);
+        slides.gameObject.SetActive(false);
         videos = Resources.LoadAll("Images and Videos/Video Prefabs");
         if (videos.Length == 0)
         {
@@ -29,6 +31,10 @@ public class Select_Menu_Script : MonoBehaviour
                 ((GameObject)videos[i]).transform.Find("Image").gameObject.GetComponent<Image>().sprite = ((GameObject)videos[i]).GetComponent<VideoPrefabScript>().VideoThumbnail;
                 Instantiate(videos[i], new Vector3(150+275*i,250,0), new Quaternion(0,0,0,0),list.transform);
             }
+        }
+        if (videos.Length > 4)
+        {
+            slides.gameObject.SetActive(true);
         }
     }
 

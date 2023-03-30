@@ -365,9 +365,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1707000278207928190, guid: 2c1be319ec7e64949b28b2c06b82f0b6, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1707000278207928191, guid: 2c1be319ec7e64949b28b2c06b82f0b6, type: 3}
       propertyPath: m_Name
       value: Video Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c1be319ec7e64949b28b2c06b82f0b6, type: 3}
+--- !u!1 &1707000277522360664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1707000278207928191, guid: 2c1be319ec7e64949b28b2c06b82f0b6, type: 3}
+  m_PrefabInstance: {fileID: 1707000277522360663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1707000277522360665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707000277522360664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdaecec43877084baa0bcb0a301d3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  test: {fileID: 0}
