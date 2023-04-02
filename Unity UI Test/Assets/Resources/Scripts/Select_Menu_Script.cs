@@ -8,7 +8,7 @@ public class Select_Menu_Script : MonoBehaviour
 {
     public Object[] videos; 
     public GameObject missingText;
-    public GameObject button;
+    public GameObject list;
     public Slider slides;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class Select_Menu_Script : MonoBehaviour
         missingText.GetComponent<TMPro.TextMeshProUGUI>().text = "Currently no videos.";
         missingText.SetActive(false);
         slides.gameObject.SetActive(false);
+        slides.value = 0;
         videos = Resources.LoadAll("Images and Videos/Video Prefabs");
         if (videos.Length == 0)
         {
@@ -23,7 +24,7 @@ public class Select_Menu_Script : MonoBehaviour
         }
         else
         {
-            GameObject list = new GameObject("List");
+            list = new GameObject("List");
             list.transform.parent = this.transform;
             for(int i = 0; i < videos.Length; i++)
             {
@@ -41,6 +42,6 @@ public class Select_Menu_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        list.transform.position = new Vector3((275*(videos.Length-4))*(-slides.value),0,0);
     }
 }

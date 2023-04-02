@@ -11,6 +11,6 @@ public class Move_Selection : MonoBehaviour
     public void Update()
     {
         S = (Slider)GetComponent(typeof(Slider));
-        obj.transform.position = new Vector3(-140+(S.value)*140*2,0,0);
+        obj.transform.position = new Vector3(140+(S.value)*140*2,0,0);
     }
 }
