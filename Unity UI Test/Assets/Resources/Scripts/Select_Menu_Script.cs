@@ -28,12 +28,13 @@ public class Select_Menu_Script : MonoBehaviour
             list.transform.parent = this.transform;
             for(int i = 0; i < videos.Length; i++)
             {
-                ((GameObject)videos[i]).GetComponent<VideoPrefabScript>().VideoNumber = i+5;
+                ((GameObject)videos[i]).transform.Find("Text (TMP) (2)").GetComponent<TMPro.TextMeshProUGUI>().text = ((GameObject)videos[i]).GetComponent<VideoPrefabScript>().VideoName;
+                ((GameObject)videos[i]).GetComponent<VideoPrefabScript>().VideoNumber = i;
                 ((GameObject)videos[i]).transform.Find("Image").gameObject.GetComponent<Image>().sprite = ((GameObject)videos[i]).GetComponent<VideoPrefabScript>().VideoThumbnail;
-                Instantiate(videos[i], new Vector3(150+275*i,250,0), new Quaternion(0,0,0,0),list.transform);
+                Instantiate(videos[i], new Vector3(163+380*i,250,0), new Quaternion(0,0,0,0),list.transform);
             }
         }
-        if (videos.Length > 4)
+        if (videos.Length > 3)
         {
             slides.gameObject.SetActive(true);
         }
@@ -42,6 +43,6 @@ public class Select_Menu_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        list.transform.position = new Vector3((275*(videos.Length-4))*(-slides.value),0,0);
+        list.transform.position = new Vector3((380*(videos.Length-3))*(-slides.value),0,0);
     }
 }

@@ -12,18 +12,18 @@ public class Description_Update : MonoBehaviour
     void OnEnable()
     {
         output = "";
-        Controller = GameObject.Find("Controller");
-        VideoPrefab = Controller.gameObject.GetComponent<Controller_Script>().prefab;
-        output = output + "Name: " + VideoPrefab.GetComponent<VideoPrefabScript>().VideoName + "\n";
-        output = output + "Length: " + VideoPrefab.GetComponent<VideoPrefabScript>().minutes + ":" + VideoPrefab.GetComponent<VideoPrefabScript>().seconds + "\n";
-        output = output + "Type: " + VideoPrefab.GetComponent<VideoPrefabScript>().VideoType + "\n";
-        output = output + "Description: " + VideoPrefab.GetComponent<VideoPrefabScript>().VideoDescription + "\n";
-        this.gameObject.GetComponent<TMP_Text>().text = output;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(GameObject.Find("Controller"))
+        {
+            Controller = GameObject.Find("Controller");
+            if(Controller.gameObject.GetComponent<Controller_Script>().prefab)
+            {
+                VideoPrefab = Controller.gameObject.GetComponent<Controller_Script>().prefab;
+                output = output + "Name: " + VideoPrefab.GetComponent<VideoPrefabScript>().VideoName + "\n";
+                output = output + "Length: " + VideoPrefab.GetComponent<VideoPrefabScript>().minutes + ":" + VideoPrefab.GetComponent<VideoPrefabScript>().seconds + "\n";
+                output = output + "Type: " + VideoPrefab.GetComponent<VideoPrefabScript>().VideoType + "\n";
+                output = output + "Description: " + VideoPrefab.GetComponent<VideoPrefabScript>().VideoDescription + "\n";
+                this.gameObject.GetComponent<TMP_Text>().text = output;
+            }
+        }
     }
 }
