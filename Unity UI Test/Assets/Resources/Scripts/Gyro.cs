@@ -23,6 +23,6 @@ public class Gyro : MonoBehaviour
     }
     private Quaternion GyroToUnity(Quaternion q)
     {
-        return new Quaternion(q.x, q.y,-q.x, -q.w);
+        return new Quaternion(-q.x, -q.y, q.z, -q.w);
     }
 }
