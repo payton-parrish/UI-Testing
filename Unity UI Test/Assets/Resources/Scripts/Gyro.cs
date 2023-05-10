@@ -13,16 +13,21 @@ public class Gyro : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    /*// Update is called once per frame
     void Update()
     {
         if(SystemInfo.supportsGyroscope)
         {
             transform.rotation = GyroToUnity(Input.gyro.attitude);
         }
-    }
+    }*/
+    
     private Quaternion GyroToUnity(Quaternion q)
     {
-        return new Quaternion(-q.x, -q.y, q.z, -q.w);
+        return new Quaternion(q.x, q.y, -q.z, -q.w);
     }
+     void Update () 
+     {
+         transform.Rotate (-Input.gyro.rotationRateUnbiased.x/4, -Input.gyro.rotationRateUnbiased.y/4, 0f);
+     }
 }

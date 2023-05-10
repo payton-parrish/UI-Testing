@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 91767716aeb7c2645929cca615ef8028, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95b6c0edca8e1b34ca43af82578c5b81, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -115,7 +115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 140, y: 250}
+  m_AnchoredPosition: {x: 2250, y: 0}
   m_SizeDelta: {x: 320, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4460590762431161145
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VideoName: Video 6
   VideoDescription: Testing Video.
-  VideoNumber: 0
+  VideoNumber: 6
   VideoType: 0
   TheVideo: {fileID: 32900000, guid: 59e8196abab1ffa45a75d68f92a9a896, type: 3}
   minutes: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[]'
+  m_text: Video 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c56489a58657d6c4e934b8c7ad5ba85e, type: 2}
   m_sharedMaterial: {fileID: 21098970014090698, guid: c56489a58657d6c4e934b8c7ad5ba85e, type: 2}
